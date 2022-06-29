@@ -1,0 +1,27 @@
+/* pages/fourBlock/fourBlock.wxss */
+page{
+  background-color: whitesmoke;
+}
+
+.null{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
+}
+.image{
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  height: 200rpx;
+  width: 200rpx;
+  margin-top: 50%;
+}
+.text{
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  margin-top: 20rpx;
+}

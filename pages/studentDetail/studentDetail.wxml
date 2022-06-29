@@ -1,0 +1,43 @@
+<!--pages/studentDetail/studentDetail.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view style='margin-top: {{height*2+20}}rpx'>
+    <view class="">
+        <view class="header">
+            <view>
+                <image class="portrait" src="{{studentDetail.portrait}}" mode="scaleToFill"></image>
+            </view>
+            
+            <view class="personalInfo">
+                <view class="name">
+                    <text>{{studentDetail.name}}</text>
+                </view>
+                <view class="school">
+                    <text >{{studentDetail.school}} | {{studentDetail.major}}</text>    
+                </view>
+                <block wx:if="{{!isFollow}}">
+                    <view class="attention" bindtap="attention">
+                        <label>关注</label>
+                    </view>
+                </block>
+                <block wx:if="{{isFollow}}">
+                    <view class="attention_ed" bindtap="attention">
+                        <label>已关注</label>
+                    </view>
+                </block>
+                
+            </view>
+        </view>
+
+        <view class="introduce">
+            <view class="title">
+                <text>个人介绍</text>
+            </view>
+            <view class="self">
+                <text>{{studentDetail.selfIntroduction}}</text>
+            </view>
+        </view>
+
+    </view>
+    
+</view>
+

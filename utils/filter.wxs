@@ -1,0 +1,64 @@
+
+// 兼职工资的格式设置
+var salaryFormat= function(salary,type,clearingForm){
+  ans = salary + '元' + '/' + type + '|' + clearingForm
+  return ans
+}
+//设置时间发长短格式（只截取年月日）
+var dateFormatLength = function (dateStr) {
+  ans = dateStr.substring(0,10)
+  return ans
+}
+//将时间的连接方式改变为 /
+var dateFormatStyle = function (dateStr) {
+  ans = dateStr.substring(0,4) + '/' + dateStr.substring(5,7) + '/' + dateStr.substring(8,10)
+  return ans
+}
+//兼职详情页面的薪资设置
+var detailSalaryFormat = function(salary,type){
+  ans = '￥' + salary + '/' + type
+  return ans
+}
+
+var moneyFormat = function (money) {
+  // ans = '￥' + money.toFixed(2)
+  ans = '￥' + money
+  return ans;
+}
+//将标签字符串列表转换为列表
+var labelList = function(labelList){
+  ans = JSON.parse(labelList)
+  return ans
+}
+//截取问题详情的发布日期
+var questionCreatTime = function(dateStr){
+  ans = dateStr.substring(6,16)
+  return ans
+} 
+//截取时间的年月并加上14天
+var dayAdd = function(dateStr){
+  // ans = '问题最晚将于' + (dateStr.substring(6,7)) + '月' + (parseInt(dateStr.substring(8,10)) + 14) + '日00:00结题'
+  ans = '问题最晚将于 14 天后结题'
+  return ans
+}
+
+//wxml中跳转时传值转换
+var tranValue = function(objectStr){
+  ans = JSON.stringify(objectStr)
+  return ans
+}
+
+/*
+ * 导出
+ */
+module.exports = {
+  dateFormatLength: dateFormatLength,
+  dateFormatStyle:dateFormatStyle,
+  salaryFormat:salaryFormat,
+  detailSalaryFormat:detailSalaryFormat,
+  moneyFormat: moneyFormat,
+  labelList:labelList,
+  questionCreatTime:questionCreatTime,
+  dayAdd:dayAdd,
+  tranValue:tranValue,
+}

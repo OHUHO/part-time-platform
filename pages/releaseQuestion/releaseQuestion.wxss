@@ -1,0 +1,322 @@
+/* pages/releaseQuestion/releaseQuestion.wxss */
+page{
+  background-color: whitesmoke;
+  height: 100%;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* padding-top: 0rpx; */
+  padding: 0rpx 15rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+.reminder{
+  display: flex;
+  background-color: #f6a57f;
+  width: 100%;
+  height: auto;
+  padding: 10rpx;
+  color: rgb(97, 97, 96);
+  font-size: 26rpx;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.row{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 15rpx;
+  padding-bottom: 15rpx;
+  width: 100%;
+  border-radius: 20rpx;
+  margin-bottom: 15rpx;
+}
+
+.bigTitle{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10rpx;
+}
+.title{
+  background-color: white;
+  border: solid 1rpx; 
+  border-color: rgb(224, 221, 221);
+  padding: 10rpx;
+}
+.title_ed{
+  background-color: white;
+  border: solid 1rpx; 
+  border-color: #f6a57f;
+  padding: 10rpx;
+}
+.contents{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: solid 1rpx; 
+  border-color: rgb(224, 221, 221);
+  padding: 10rpx;
+}
+.contents_ed{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: solid 1rpx; 
+  border-color: #f6a57f;
+  padding: 10rpx;
+}
+
+.content{
+  display: flex;
+  width: 100%;
+}
+.textarea{
+  display: flex;
+  width: 100%;
+  height: 600rpx;
+}
+
+.labelAdd{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+  color: #f6a57f;
+}
+.labelAdd .iconfont{
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+}
+.selectedLabels{
+  display: flex;
+  flex-direction: row;
+}
+.selectedLabel{
+  padding: 10rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  border: 2rpx solid rgb(202, 200, 200);
+  margin-right: 10rpx;
+  align-items: center;
+  background-color: #f6a57f;
+}
+.personalInfo{
+  margin-bottom: 15rpx;
+}
+.reward{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: solid 1rpx; 
+  border-color: rgb(224, 221, 221);
+  padding: 10rpx;
+}
+.checkboxChange{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5rpx;
+}
+.radio{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20rpx;
+}
+
+/* 未选中的 背景样式 */
+radio .wx-radio-input{ 
+  height: 36rpx; 
+  width: 36rpx;
+  border-radius: 50%;
+}
+/* 选中后的 背景样式 */
+radio .wx-radio-input.wx-radio-input-checked{
+ border: none;
+}
+/* 选中后的 对勾样式 */
+radio .wx-radio-input.wx-radio-input-checked::before{
+ border-radius: 50%;
+ width: 36rpx; 
+ height: 36rpx;
+ line-height: 36rpx;
+ text-align: center;
+ font-size:36rpx;
+ font-weight: 600; 
+ color:#fff;
+ background: #f6a57f;
+ border: 10rpx solid #f6a57f;
+
+}
+.line{
+  background: rgb(224, 221, 221);
+  width: 96%;
+  height: 2rpx;
+  margin: 15rpx 0rpx;
+  margin-top: 15rpx;
+  margin-left: 15rpx;
+}
+.selectMoney{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+.scroll-x {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+.view {
+  width: 100rpx;
+  height: 50rpx;
+  padding-top: 8rpx;
+  padding-bottom: 8rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  border: 2rpx solid rgb(202, 200, 200);
+  margin-right: 16rpx;
+  align-items: center;
+}
+.active,._left{
+  color: #fff;
+  background-color: #f6a57f;
+  /* rgb(115, 178, 250) */
+}
+
+.customMoney{
+  display: flex;
+  flex-direction: row;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  background-color: white;
+  border: solid 1rpx; 
+  border-color: rgb(224, 221, 221);
+  margin-left: 165rpx;
+  margin-right: 65rpx;
+  margin-bottom: 20rpx;
+}
+.customInput{
+  padding-left: 10rpx;
+}
+.attention{
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+  font-size: 26rpx;
+  font-weight: 300;
+}
+
+.btno {
+  width: 60%;
+  height: 200rpx;
+  margin-top: 66rpx;
+}
+
+.main {
+  text-align: center;
+  font-size: 40rpx;
+  padding: 20rpx;
+  font-weight: 1000;
+  color: white;
+  background-color:#f6a57f;
+  border-radius: 20rpx;
+}
+
+
+/* 底部弹出框样式 */
+/*模态框*/
+.modals {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modals-cancel {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.bottom-dialog-body {
+  position: absolute;
+  z-index: 10001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10rpx;
+  height: 600rpx;
+  background-color: #fff;
+}
+
+/*动画前初始位置*/
+/* .bottom-pos {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+} */
+
+
+.aContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 600rpx;
+}
+.icon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 50rpx;
+  color: #f6a57f;
+  
+}
+.selectLabel{
+  font-size: 34rpx;
+}
+
+.labels{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  padding-top: 20rpx;
+}
+.label{
+  padding: 10rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  border: 2rpx solid rgb(202, 200, 200);
+  margin: 10rpx;
+  align-items: center;
+}
+.label_active{
+  padding: 10rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  border: 2rpx solid rgb(202, 200, 200);
+  margin: 10rpx;
+  align-items: center;
+  background-color: #f6a57f;
+}
+.btn{
+  position: fixed;
+  width: 100%;
+  bottom: 20rpx;
+}
+.confirm{
+  background-color: #f6a57f;
+  border-radius: 20rpx;
+}
+

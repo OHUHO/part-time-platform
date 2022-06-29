@@ -1,0 +1,100 @@
+<!--pages/questionsDetail/questionsDetail.wxml-->
+<wxs src='/utils/filter.wxs' module='filter'></wxs>
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view style='margin-top: {{height*2+20}}rpx'>
+    <view class="question">
+        <view class="user">
+            <view class="userInfo">
+                <image class="image" src="{{questionDetail.portrait}}"></image>
+                <label class="name">
+                    <view>
+                        <text>  {{questionDetail.username}}</text>
+                    </view>
+                </label>
+            </view>
+            <view class="creatTime">
+                <text class="time">{{filter.questionCreatTime(questionDetail.createTime)}}</text>
+            </view>
+        </view>
+        <view class="container">
+            <view class="title">
+                <text>{{questionDetail.title}}</text>
+            </view>
+            <view class="labels">
+                <view style="display:{{questionDetail.isGiveMoney?'block':'none'}}">
+                    <text class="labelMoney">{{filter.moneyFormat(questionDetail.money)}}</text>
+                </view>
+                <view  wx:for="{{filter.labelList(questionDetail.labelList)}}" wx:key="index">
+                    <text class="label">{{item}}</text>
+                </view>
+            </view>
+            <view class="endTime">
+                <text class="time1">{{filter.dayAdd(questionDetail.createTime)}}</text>
+            </view>
+            <view class="contents">
+                <text>{{questionDetail.contents}}</text>
+            </view>
+        </view>
+        <view class="other">
+            <view class="{{isGood?'goodEd':'good'}}" bindtap="goods">
+                <icon class="{{isGood?'iconGoodEd':'iconGood'}} iconfont icon-dianzan"></icon>
+                <text>点赞</text>
+            </view>
+            <view class="writeAnswer" bindtap="writeAnswer">
+                <icon class="iconAnswer iconfont icon-xie"></icon>
+                <text>写回答</text>
+            </view>
+        </view>
+    </view>
+    <view class="answerArea" >
+        <view class="answerHeader">
+            <text>回答数</text>
+            <text>{{allAnswerNum}}</text>
+        </view>
+        <!-- 添加分割线 -->
+        <view class="line"></view>
+        <!-- 循环 -->
+        <view class="answers" >
+            <!-- 一个回复以及评论问题的组件 -->
+            <view wx:for="{{commentsList}}" wx:key="index">
+                <AnswerQuestion portrait="{{item.portrait}}" username="{{item.username}}" publishTime="{{item.creatTime}}" comment="{{item.commentDetail}}" replyList="{{item.replyList}}"  transCommentId="{{item.commentId}}" tranQuestionId="{{item.messageId}}" bind:getQuestionsAbout = 'getQuestionsAbout'></AnswerQuestion>
+            </view>
+        </view>
+        
+    </view>
+    
+</view>
+
+<!-- AnswerQuestion 组件调用页面的方法 -->
+<view ></view>
+
+
+
+<!-- 自定义底部动画（回答框） -->
+<view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+    <view class="modals-cancel" bindtap="hideModal"></view>
+    <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+        <view class="aContainer">
+            <view class="icon">
+                <viwe class="modalHeader" bindtap="hideModal">
+                    <text class="cancel">取消</text>
+                </viwe>
+                <view class="modalHeader">
+                    <text  class="write">写回答</text>
+                </view>
+                <view class="modalHeader" bindtap="comment">
+                    <view class="confirm">
+                        <text>发布</text>
+                    </view>
+                </view>
+            </view>
+            <view class="modalLine"></view>
+            
+            <view class="textareaContainer">
+                <textarea class="textarea" cursor-spacing='140' placeholder="请输入你对此问题的见解！" focus="{{isAutoFocus}}" maxlength="1000" type="text" value="{{answerContents}}" data-name="answerContents" bindblur="setInput"></textarea>
+            </view>
+        </view>
+    </view>
+</view>
+
+

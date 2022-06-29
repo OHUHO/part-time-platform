@@ -1,0 +1,4 @@
+/* pages/category/category.wxss */
+page{
+  background-color: whitesmoke;
+}

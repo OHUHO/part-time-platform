@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "nav-bar": "/components/navbar/navbar",
+    "PartTime":"/components/PartTime/PartTime"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 300,
+  "backgroundTextStyle": "dark"
+}

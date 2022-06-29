@@ -1,0 +1,25 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view style='margin-top: {{height*2+20}}rpx'>
+  
+  <button style="background-color: red;" bindtap="showModal">点我</button>
+  <view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+    <view class="modals-cancel" bindtap="hideModal"></view>
+    <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+      <view class="aContainer">
+        <view class="icon">
+          <!-- <icon class="iconfont icon-xiangxiax"></icon>   -->
+          <text class="selectLabel">选择标签</text>
+        </view>
+        <view class="labels">
+          <view class="label{{item.isActive?'_active':'' }}" wx:for="{{labels}}" wx:key="index" data-index="{{index}}" bindtap="clickLabel">{{item.label}}</view>
+        </view>
+        <view class="btn">
+          <button class="confirm" bindtap="confirmLabels">确定</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+ 
+</view>

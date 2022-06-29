@@ -1,0 +1,31 @@
+/* pages/myDemand/myDemand.wxss */
+page{
+    background-color: whitesmoke;
+}
+
+
+.reminder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.image{
+    display: flex;
+    /* justify-content: center; */
+    width: 200rpx;
+    height: 200rpx;
+    margin-top: 50%;
+}
+.auth{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rpx;
+    align-items: center;
+}
+.go{
+    font-size: 35rpx;
+    margin-top: 6rpx;
+    color: #f6a57f;
+}

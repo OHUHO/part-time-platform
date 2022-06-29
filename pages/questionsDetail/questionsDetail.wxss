@@ -1,0 +1,296 @@
+/* pages/questionsDetail/questionsDetail.wxss */
+page{
+    background-color: whitesmoke;
+}
+.question{
+    background-color: white;
+}
+.user{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10rpx;
+    margin: 10rpx;
+}
+.userInfo {
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    
+}
+.image{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50rpx;
+    margin-right: 20rpx;
+}
+.name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.time{
+    font-size: 24rpx;
+    color: rgb(158, 156, 156);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 10rpx;
+    margin: 10rpx;
+    background-color: white;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 38rpx;
+}
+
+.labels{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120rpx;
+    border-radius: 10rpx;
+    margin-top: 10rpx;
+    padding: 3rpx 10rpx;
+    margin-right: 8rpx;
+    color: rgb(78, 83, 88);
+    font-size: 26rpx;
+    background-color: #f6a57f;
+}
+.labelMoney{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rpx;
+    margin-top: 10rpx;
+    padding: 3rpx 10rpx;
+    margin-right: 8rpx;
+    color: white;
+    font-size: 26rpx;
+    background-color: #bfc072;
+}
+.endTime{
+    display: flex;
+    flex-direction: row;
+    margin: 10rpx;
+    width: 100%;
+}
+.time1{
+    font-size: 25rpx;
+    color: rgb(78, 83, 88);
+}
+.contents{
+    font-size: 33rpx;
+    letter-spacing: normal;
+    line-height: 50rpx;
+    width: 100%;
+}
+.other{
+    display: flex;
+    flex-direction: row;
+    padding: 10rpx;
+    margin: 10rpx;
+    justify-content: space-between;
+}
+.good{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 2rpx solid rgb(184, 183, 183);
+    color: rgb(141, 140, 140);
+    font-weight: 500;
+    font-size: 30rpx;
+    padding: 10rpx;
+    border-radius: 50rpx;
+    width: 200rpx;
+    height: 50rpx;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+}
+.iconGood{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 40rpx;
+    font-weight: 200;
+    color: rgb(141, 140, 140); 
+    padding-right: 10rpx;
+}
+.goodEd{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 2rpx solid #f6a57f;
+    color: #f6a57f;
+    font-weight: 500;
+    font-size: 30rpx;
+    padding: 10rpx;
+    border-radius: 50rpx;
+    width: 200rpx;
+    height: 50rpx;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+}
+.iconGoodEd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 40rpx;
+    font-weight: 200;
+    color: #f6a57f; 
+    padding-right: 10rpx;
+}
+
+.writeAnswer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6a57f;
+    color: white;
+    font-weight: 500;
+    font-size: 30rpx;
+    padding: 10rpx;
+    border-radius: 50rpx;
+    width: 200rpx;
+    height: 50rpx;
+}
+.iconAnswer{
+    font-size: 36rpx;
+    font-weight: 200;
+    padding-right: 10rpx;
+}
+.answerArea{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20rpx;
+    /* margin: 10rpx; */
+}
+
+.answerHeader{
+    display: flex;
+    flex-direction: row;
+    font-size: 30rpx;
+}
+.line{
+    background: whitesmoke;
+    width: 100%;
+    height: 5rpx;
+    /* margin: 30rpx 0rpx; */
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+
+/* 底部弹出框样式 */
+/*模态框*/
+.modals {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+  
+.modals-cancel {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+  
+.bottom-dialog-body {
+    position: absolute;
+    z-index: 10001;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10rpx;
+    height: 450rpx;
+    background-color: #fff;
+    border-top-left-radius: 30rpx;
+    border-top-right-radius: 30rpx;
+}
+  
+.aContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 600rpx;
+}
+.icon{
+    display: flex;
+    flex-direction: row;
+    font-size: 34rpx;
+    /* color: #f6a57f; */
+    padding-top: 15rpx;
+    padding-bottom: 10rpx;
+    width: 100%;
+}
+.modalHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.333333333%;
+}
+.cancel{
+    font-size: 34rpx;
+}
+.write{
+    font-size: 37rpx;
+}
+.confirm{
+    background-color: #f6a57f;
+    padding: 10rpx 30rpx;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30rpx;
+    font-size: 34rpx;
+}
+.modalLine{
+    background: rgb(236, 235, 235);
+    width: 100%;
+    height: 2rpx;
+    /* margin: 30rpx 0rpx; */
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+}
+.textareaContainer{
+    /* border: 2rpx solid #f6a57f; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30rpx;
+    margin: 0rpx 10rpx;
+    background-color: whitesmoke;
+    border-radius: 10rpx;
+}
+.textarea{
+    width: 96%;
+    font-size: 34rpx;
+    letter-spacing: normal;
+    line-height: 50rpx;
+}
+
+

@@ -1,0 +1,15 @@
+/* pages/partTime/partTime.wxss */
+page{
+  background-color: whitesmoke;
+}
+/* .publish{
+  position: fixed;
+  background: rgb(207, 150, 240);
+  float: right;
+  bottom: 50px;
+  right: 20px;
+  border-radius: 100%;
+}
+.iconfont{
+  font-size: 100rpx;
+} */

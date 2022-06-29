@@ -1,0 +1,24 @@
+<!--components/PartTime/PartTime.wxml-->
+<view class="header">
+  <view class="title">
+    <view class="userInfo">
+      <image class="image" src="{{image}}"></image>
+      <label class="name">
+        <text>{{name}}</text>
+      </label>
+    </view>
+    <text class="right">{{salary}}</text>
+  </view>
+  <view class="row">
+    <text class="workType" style="background-color:{{randomColorArr[0]}}">{{workType}}</text>
+    <text class="right fontStyle">{{creatTime}}</text>
+  </view>
+  <text class="row fontStyle">工作地点：{{workAddress}}</text>
+  <view class="row">
+    <text class="fontStyle">工作时间：{{workTimeBegin}}~{{workTimeEnd}}</text>
+    <text class="right more">详情 >></text>
+  </view>
+  <!-- <view class="row">
+    <text class="fontStyle">人数要求：{{peopleNumber}}</text>
+  </view> -->
+</view>

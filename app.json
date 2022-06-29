@@ -1,0 +1,72 @@
+{
+  "pages":[
+    "pages/welcome/welcome",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/students/students",
+    "pages/partTime/partTime",
+    "pages/partTimeDetail/partTimeDetail",
+    "pages/forum/forum",
+    "pages/stu_authentication/stu_authentication",
+    "pages/bus_authentication/bus_authentication",
+    "pages/junk/junk",
+    "pages/publish/publish",
+    "pages/search/search",
+    "pages/category/category",
+    "pages/fourBlock/fourBlock",
+    "pages/releaseQuestion/releaseQuestion",
+    "pages/questionsDetail/questionsDetail",
+    "pages/studentDetail/studentDetail",
+    "pages/excellentBusinessPartTime/excellentBusinessPartTime",
+    "pages/like/like",
+    "pages/authentication/authentication",
+    "pages/myPartTime/myPartTime",
+    "pages/myDemand/myDemand"
+    
+  ],
+
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle":"black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "selectedColor": "#f6a57f",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/tabbar/index.png",
+        "selectedIconPath": "/static/tabbar/index_ed.png"
+      },
+      {
+        "pagePath":"pages/students/students",
+        "text": "学长",
+        "iconPath": "/static/tabbar/student.png",
+        "selectedIconPath": "/static/tabbar/student_ed.png"
+      },
+      {
+        "pagePath":"pages/partTime/partTime",
+        "text": "学兼",
+        "iconPath": "/static/tabbar/partTime.png",
+        "selectedIconPath": "/static/tabbar/partTime_ed.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "iconPath": "/static/tabbar/home.png",
+        "selectedIconPath": "/static/tabbar/home_ed.png"
+      }
+    ]
+  },
+  
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "debug": true,
+  "lazyCodeLoading": "requiredComponents"
+}

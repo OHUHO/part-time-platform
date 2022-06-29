@@ -1,0 +1,82 @@
+/* pages/studentDetail/studentDetail.wxss */
+page{
+    background-color: whitesmoke;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    padding: 10rpx;
+    background-color: white;
+    margin: 10rpx;
+    border-radius: 10rpx;
+}
+.portrait{
+    height: 180rpx;
+    width: 180rpx;
+    border-radius: 100%;
+    border: 10rpx solid white;
+    /* padding: 40rpx; */
+    margin: 20rpx;
+}
+.personalInfo{
+    display: flex;
+    flex-direction: column;
+    margin: 20rpx;
+}
+.school{
+    display: flex;
+    flex-direction: row;
+    margin: 10rpx 0rpx;
+    color: rgb(25, 73, 73);
+}
+.name{
+    font-size: 40rpx;
+    font-weight: 600;
+}
+.attention{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6a57f;
+    width: 150rpx;
+    height: 50rpx;
+    border-radius: 10rpx;
+}
+.attention_ed{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #c9c6c6;
+    width: 150rpx;
+    height: 50rpx;
+    border-radius: 10rpx;
+}
+
+.introduce{
+    display: flex;
+    flex-direction: column;
+    padding: 10rpx;
+    /* background-color: white; */
+    margin: 10rpx;
+    border-radius: 10rpx;
+}
+.title{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: white;
+    height: 70rpx;
+    width: 180rpx;
+    border-radius: 10rpx;
+    border-top-right-radius: 100rpx;
+    padding-left: 30rpx;
+}
+.self{
+    display: flex;
+    background-color: white;
+    padding: 20rpx;
+    /* margin: 10rpx; */
+    border-radius: 10rpx;
+}

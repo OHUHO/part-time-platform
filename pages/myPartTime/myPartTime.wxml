@@ -1,0 +1,24 @@
+<!--pages/myPartTime/myPartTime.wxml-->
+<wxs src='/utils/filter.wxs' module='filter'></wxs>  
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view style='margin-top: {{height*2+20}}rpx'>
+    <!-- 判断用户是否发布过兼职 -->
+    <view class="">
+        <view wx:if="{{partTimeList.length != 0}}">
+            <PartTime></PartTime>
+            <view class="partTime" wx:for="{{partTimeList}}" wx:key="index">
+                <PartTime image='{{item.portrait}}' name='{{item.name}}' salary='{{filter.salaryFormat(item.salary,item.salaryType,item.clearingForm)}}' workType='{{item.classify}}' creatTime='{{filter.dateFormatStyle(item.creatDate)}}' workAddress='{{item.address}}' workTimeBegin='{{filter.dateFormatLength(item.workHoursBegin)}}' workTimeEnd='{{filter.dateFormatLength(item.workHoursEnd)}}'  bindtap="transmit" data-value="{{item}}"></PartTime>
+            </view>
+        </view>
+        <view wx:else>
+            <view class="reminder">
+                <image class="image" src="/static/images/null.png"></image>
+                <view class="auth">
+                    <text>您还没有发布信息</text>
+                    <!-- <text class="go" bindtap="goAuth">去认证</text> -->
+                </view>
+                
+            </view>
+        </view>
+    </view>
+</view>

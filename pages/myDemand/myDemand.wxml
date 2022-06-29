@@ -1,0 +1,25 @@
+<!--pages/myDemand/myDemand.wxml-->
+<wxs src='/utils/filter.wxs' module='filter'></wxs>  
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view style='margin-top: {{height*2+20}}rpx'>
+    <view class="">
+        <view wx:if="{{demandList.length != 0}}">
+            <view class="new" wx:for="{{demandList}}" wx:key="index">
+                <Student title="{{item.title}}" labelList="{{filter.labelList(item.labelList)}}" schooMajor="{{item.school}} / {{item.major}}" bindtap="transmit" data-value="{{item}}"></Student>
+            </view>
+            <!-- <Student></Student> -->
+        </view>
+        <view wx:else>
+            <view class="reminder">
+                <image class="image" src="/static/images/null.png"></image>
+                <view class="auth">
+                    <text>您还没有发布信息</text>
+                    <!-- <text class="go" bindtap="goAuth">去认证</text> -->
+                </view>
+                
+            </view>
+        </view>
+    </view>
+
+</view>
+

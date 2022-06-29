@@ -1,0 +1,86 @@
+/* pages/students/students.wxss */
+page{
+  background-color: whitesmoke;
+}
+
+
+.top{
+  display: flex;
+  height: 200rpx;
+  padding: 10rpx;
+}
+.topImg{
+  width: 100%;
+  height: 200rpx;
+  border-radius: 20rpx;
+}
+.user{
+  display: flex;
+  flex-direction: row;
+  padding-right: 10rpx;
+  padding-left: 10rpx;
+  /* padding-bottom: 5rpx; */
+  /* margin: 10rpx 10rpx; */
+  
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  /* padding-bottom: 10rpx; */
+}
+.userInfo {
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+}
+.image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  margin-right: 20rpx;
+}
+.releaseQuestions{
+  border: 2rpx solid rgb(202, 200,200);
+  padding: 8rpx 20rpx;
+  border-radius: 40rpx;
+}
+.releaseQuestion{
+  font-size: 30rpx;
+  font-weight: 500;
+  color: rgb(133, 128, 128);
+}
+
+.topTabSwiper {
+  display: flex;
+  flex-direction: row;
+  padding: 8rpx 10rpx;
+  /* margin: 10rpx; */
+  border-top: 1px solid rgb(230, 228, 228);
+  border-bottom: 1px solid rgb(230, 228, 228);
+  background-color: white;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding-left: 10rpx;
+  width: 18%;
+  font-size: 30rpx;
+  color: rgb(150, 148, 148);
+}
+ 
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+ 
+.tabBorer {
+  /* border-bottom: 1px solid #f6a57f; */
+  color: #f6a57f;
+}
+
+.swiper{
+  height: 1200rpx;
+}
+

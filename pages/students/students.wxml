@@ -1,0 +1,52 @@
+<!--pages/students/students.wxml-->
+<wxs src='/utils/filter.wxs' module='filter'></wxs>  
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view style='margin-top: {{height*2+20}}rpx'>
+  <!-- <button bindtap="temp">click me</button> -->
+  <view class="studentContainer">
+    <view class="top">
+      <image class="topImg" src="{{topImg}}"></image>
+    </view>
+    <view class="user">
+      <view class="userInfo">
+        <image class="image" src="{{userImg}}"></image>
+        <label class="name">
+          <text>  {{username}}</text>
+        </label>
+      </view>
+
+      <view class="releaseQuestions">
+        <view class="releaseQuestion" bindtap="goRealseQuestions">去提问  ></view>
+      </view>
+    </view>
+    <view>
+      <view class='topTabSwiper'>
+        <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>最新</view>
+        <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>免费</view>
+        <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>悬赏</view>
+      </view>
+      <swiper current="{{currentData}}" class='swiper' style="height: {{swiperHeight}}rpx;" duration="100" bindchange="bindchange">
+        <swiper-item class="swiperItem">
+          <view class="new" wx:for="{{questionsList}}" wx:key="index">
+            <Student title="{{item.title}}" labelList="{{filter.labelList(item.labelList)}}" schooMajor="{{item.school}} / {{item.major}}" bindtap="transmit" data-value="{{item}}"></Student>
+          </view>
+        </swiper-item> 
+        <swiper-item class="swiperItem">
+          <view class="new">
+            <Student></Student>
+          </view>
+        </swiper-item>
+        <swiper-item class="swiperItem">
+          <view class="new">
+            <Student></Student>
+            
+          </view>
+        </swiper-item>  
+      </swiper>
+    </view>
+
+    <!-- 待添加数据 -->
+      
+
+  </view>
+</view>

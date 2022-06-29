@@ -1,0 +1,71 @@
+<!--pages/like/like.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="" style='margin-top: {{height*2+20}}rpx'>
+    <view>
+        <view class='topTabSwiper' bindtap='checkCurrent'>
+            <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0">关注</view>
+            <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1">粉丝</view>
+        </view>
+        <swiper current="{{currentData}}" class='swiper' style="height: {{swiperHeight}}rpx;" duration="100" bindchange="bindchange">
+            <swiper-item class="swiperItem">
+                <!-- 一个自定义组件 -->
+                <view>
+                    <view class="box" wx:for="{{attentionList}}" wx:key="index">
+                        <view class="contents">
+                            <image class="portrait" src="{{item.portrait}}"></image>
+                            <view class="userinfo">
+                                <text class="username">{{item.username}}</text>
+                                <text class="introduction">{{item.motto == null || '' ? introduction : item.motto}}</text>
+                            </view>
+                        </view>
+                        <block wx:if="{{isFollow}}">
+                            <view class="attention" bindtap="attention">
+                                <label>关注</label>
+                            </view>
+                        </block>
+                        <block wx:if="{{!isFollow}}">
+                            <view class="attention_ed" bindtap="attention">
+                                <label>已关注</label>
+                            </view>
+                        </block>
+                    
+                    </view>
+                    <view class="line"></view>
+                </view>
+                
+            </swiper-item> 
+            <swiper-item class="swiperItem">
+                <!-- 此处考虑到事件的传值，不再使用组件 -->
+                <!-- 下面的like组件未启用 -->
+                <!-- <like></like> -->
+                
+                <view>
+                    <view class="box" wx:for="{{fansList}}" wx:key="index">
+                        <view class="contents">
+                            <image class="portrait" src="{{item.portrait}}"></image>
+                            <view class="userinfo">
+                                <text class="username">{{item.username}}</text>
+                                <text class="introduction">{{item.motto == null || '' ? introduction : item.motto}}</text>
+                            </view>
+                        </view>
+                        <block wx:if="{{isFollow1}}">
+                            <view class="attention" bindtap="attention">
+                                <label>关注</label>
+                            </view>
+                        </block>
+                        <block wx:if="{{!isFollow1}}">
+                            <view class="attention_ed" bindtap="attention">
+                                <label>已关注</label>
+                            </view>
+                        </block>
+                    
+                    </view>
+                    <view class="line"></view>
+                </view>
+
+            </swiper-item>
+            
+        </swiper> 
+    </view>
+</view>
+

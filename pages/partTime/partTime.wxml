@@ -1,0 +1,18 @@
+<!--pages/partTime/partTime.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<view class="partTimeContainer" style='margin-top: {{height*2+20}}rpx'>
+  <wxs src='/utils/filter.wxs' module='filter'></wxs>  
+  <view class="partTime" wx:for="{{partTimeList}}" wx:key="item">
+    <!-- 将wxml页面的值传递给js页面   bindtap="transmit" data-value="{{item}}" -->
+    <!-- 将js中的 partTimeDetail 返回给组件  partTimeDetail="{{detail}}"-->
+
+    <PartTime image='{{item.portrait}}' name='{{item.name}}' salary='{{filter.salaryFormat(item.salary,item.salaryType,item.clearingForm)}}' workType='{{item.classify}}' creatTime='{{filter.dateFormatStyle(item.creatDate)}}' workAddress='{{item.address}}' workTimeBegin='{{filter.dateFormatLength(item.workHoursBegin)}}' workTimeEnd='{{filter.dateFormatLength(item.workHoursEnd)}}'  bindtap="transmit" data-value="{{item}}"></PartTime>
+    
+  </view>
+  <!-- 添加招聘的人数 -->
+  <!-- <view class="publish" bindtap="publish">
+    <icon class="iconfont icon-tianjia-"></icon>
+  </view> -->
+
+</view>

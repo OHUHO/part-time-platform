@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "nav-bar": "/components/navbar/navbar",
+    "PartTime":"/components/PartTime/PartTime"
+  }
+}

@@ -1,0 +1,47 @@
+<!--pages/authentication/authentication.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view style='margin-top: {{height*2+20}}rpx'>
+    <view class="">
+        <view wx:if="{{userAuthentication != null}}">
+            <!-- 2022-03-24 再写一天小程序 -->
+            <view class="box">
+                <view class="userinfo">
+                    <image class="portrait" src="{{portrait}}"></image>
+                    <text class="username">{{username}}</text>
+                </view>
+                <view class="alreadyAuth">
+                    <view class="already" wx:for="{{userAuthentication}}" wx:key="index">
+                        <view wx:if="{{item.school != null}}">
+                            <view class="detail">
+                                <text class="big">学长/学姐认证</text>
+                                <text class="small">{{item.school}}</text>
+                            </view> 
+                            <view class="line"></view> 
+                        </view>
+                        <view wx:if="{{item.type != null}}">
+                            <view class="detail">
+                                <text class="big">商家认证</text>
+                                <text class="small">{{item.name}}</text>
+                            </view>
+                        </view>
+                        
+                    </view>
+                </view>
+            </view>
+            
+        </view>
+
+        <view wx:else>
+            <view class="reminder">
+                <image class="image" src="/static/images/null.png"></image>
+                <view class="auth">
+                    <text>你还没有认证记录</text>
+                    <text class="go" bindtap="goAuth">去认证</text>
+                </view>
+                
+            </view>
+        </view>
+    </view>
+
+</view>
+

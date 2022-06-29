@@ -1,0 +1,59 @@
+/* pages/excellentBusinessPartTime/excellentBusinessPartTime.wxss */
+
+page{
+    background-color: whitesmoke;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250rpx;
+    background: -webkit-linear-gradient(top,whitesmoke,#e3f5db,whitesmoke);
+    padding-top: 20rpx;
+}
+.logo{
+    height: 150rpx;
+    width: 150rpx;
+    border-radius: 100%;
+    border: 5rpx solid rgb(219, 176, 176);
+}
+.name{
+    font-size: 34rpx;
+    font-weight: 400;
+    padding: 10rpx;
+}
+
+.selfIntroduction{
+    display: flex;
+    flex-direction: column;
+    margin: 10rpx;
+}
+.bigTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70rpx;
+    width: 200rpx;
+    /* background-color: rgb(221, 216, 216); */
+    border-radius: 10rpx;
+    margin: 6rpx  10rpx;
+    background: -webkit-linear-gradient(top,whitesmoke,rgb(221, 216, 216),whitesmoke);
+
+}
+.contents{
+    display: flex;
+    font-size: 30rpx;
+    font-weight: 500;
+    line-height: 50rpx;
+    background-color: white;
+    padding: 15rpx;
+    margin: 0rpx 10rpx;
+    border-radius: 10rpx;
+}
+.history{
+    display: flex;
+    flex-direction: column;
+    margin: 10rpx;
+}
+
+

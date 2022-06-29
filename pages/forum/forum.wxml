@@ -1,0 +1,3 @@
+<!--pages/forum/forum.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<text>pages/forum/forum.wxml</text>

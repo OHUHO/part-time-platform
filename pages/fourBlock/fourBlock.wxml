@@ -1,0 +1,21 @@
+<!--pages/fourBlock/fourBlock.wxml-->
+<wxs src='/utils/filter.wxs' module='filter'></wxs>
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view style='margin-top: {{height*2+20}}rpx'>
+    <!-- 下次从此处开始完成页面的编写 -->
+    <view class="">
+        <view class="header">
+            <view wx:if="{{length > 0}}">
+                <view  wx:for="{{partTimeList}}" wx:key="item">
+                    <PartTime image='{{item.portrait}}' name='{{item.name}}' salary='{{filter.salaryFormat(item.salary,item.salaryType,item.clearingForm)}}' workType='{{item.classify}}' creatTime='{{filter.dateFormatStyle(item.creatDate)}}' workAddress='{{item.address}}' workTimeBegin='{{filter.dateFormatLength(item.workHoursBegin)}}' workTimeEnd='{{filter.dateFormatLength(item.workHoursEnd)}}'  bindtap="transmit" data-value="{{item}}"></PartTime>
+                </view>
+            </view>
+            <view wx:else>
+                <view class="null">
+                    <image class="image" src="/static/images/null.png"></image>
+                    <text class="text">快去发布兼职吧</text>
+                </view>
+            </view>    
+        </view>
+    </view>
+</view>

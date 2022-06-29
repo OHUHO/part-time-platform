@@ -1,0 +1,117 @@
+<!--pages/partTimeDetail/partTimeDetail.wxml-->
+<wxs src='/utils/filter.wxs' module='filter'></wxs>  
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view style='margin-top: {{height*2+20}}rpx'>
+  <view>
+    <image class="background" src="{{background}}" style="position: relative; left: 0rpx; top: -2rpx"></image>
+  </view>
+  <view class="radius">
+    <view class="title">
+      <text>{{partTimeDetail.name}}</text>
+      <text class="salary">{{filter.detailSalaryFormat(partTimeDetail.salary,partTimeDetail.salaryType)}}</text>
+    </view>
+    <view class="label">
+      <text>{{partTimeDetail.clearingForm}}</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="reminder" bindtap="reminder">
+      <view>
+        <icon class="iconfont icon-huanbaoweishi-jihuo"></icon>
+        <text class="text0">  京鹿保障</text>
+        <text class="text1">    放心选购 兼职无忧</text>
+      </view>
+      <text class="text2"> > </text>
+    </view>
+    <view class="information">
+      <view class="info0">
+        <view class="hint">
+          <icon class="iconfont icon-didian"></icon>
+          <text > 工作地点</text>
+        </view>
+        <text class="detail">{{partTimeDetail.address}}</text>
+      </view>
+
+      <!-- 分割线 -->
+      <view class="line"></view>
+
+      <view class="info0">
+        <view class="hint">
+          <icon class="iconfont icon-shijianduan"></icon>
+          <text > 工作日期</text>
+        </view>
+        <text class="detail">{{filter.dateFormatLength(partTimeDetail.workHoursBegin)}}~{{filter.dateFormatLength(partTimeDetail.workHoursEnd)}}</text>
+      </view>
+
+      <view class="line"></view>
+
+      <view class="info0">
+        <view class="hint">
+          <icon class="iconfont icon-renshu"></icon>
+          <text > 人数要求</text>
+        </view>
+        <text class="detail">{{partTimeDetail.alreadyPeople == null ? 0:partTimeDetail.alreadyPeople}} / {{partTimeDetail.peopleNumber}}</text>
+      </view>
+
+      <view class="line"></view>
+
+      <view class="info0">
+        <view class="hint">
+          <icon class="iconfont icon-xingbieyaoqiu"></icon>
+          <text > 性别要求</text>
+        </view>
+        <text class="detail">{{partTimeDetail.sexRequirement}}</text>
+      </view>
+
+    </view>
+
+    <view class="publisherDetails">
+      <view class="headline">
+        <text>发布者</text>
+      </view>
+      <view class="publisher">
+        <view class="userInfo">
+          <image class="image" src="{{partTimeDetail.portrait}}"></image>
+          <label class="name">
+            <text>  {{businessName}}</text>
+          </label>
+        </view>
+        <view class="line"></view>
+        <view class="authentication">
+          <icon class="authentication iconfont icon-quangou_"></icon>
+          <text>  已完成商家认证</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="positionDetails">
+      <view class="headline">
+        <text>岗位详情</text>
+      </view>
+      <view class='positionContent'>
+        <text class="contentShow" >{{contentShow}}</text>
+        <text class='ellipsis_text' hidden='{{content.length<=maxLength}}'  bindtap='ellipsis'>{{ellipsis?"展开":"收起"}}</text>
+      </view>
+      <!-- <view class="positionContent">
+        
+      </view> -->
+
+    </view>
+
+  </view>
+
+  <view class="bottom">
+    <view class="main">
+      <view class="contact" bindtap="contact">
+        <icon class="iconContact iconfont icon-lianxishangjia1"></icon>
+        <text>联系Ta</text>
+      </view>
+      <view class="enroll" bindtap="confirm">立即报名</view>
+    </view>
+  </view>
+  
+
+</view>
+
+

@@ -1,0 +1,33 @@
+<!--pages/excellentBusinessPartTime/excellentBusinessPartTime.wxml-->
+<wxs src='/utils/filter.wxs' module='filter'></wxs>  
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view style='margin-top: {{height*2+20}}rpx'>
+    <!-- 展示商家的店铺信息 商家发布的兼职情况 -->
+    <view class="">
+        <view class="header">
+            <image class="logo" src="{{serverUrl + detail.portrait}}"></image>
+            <label class="name">{{detail.name}}</label>
+        </view>
+        <!-- <view class="line"></view> -->
+        <view class="selfIntroduction">
+            <text class="bigTitle">店铺介绍</text>
+            <text class="contents">{{detail.selfIntroduction}}</text>
+        </view>
+        
+        <view class="history">
+            <text class="bigTitle">历史兼职</text>
+            <view class="partTime"  wx:for="{{partTimeList}}" wx:key="item">
+                <PartTime image='{{item.portrait}}' name='{{item.name}}' salary='{{filter.salaryFormat(item.salary,item.salaryType,item.clearingForm)}}' workType='{{item.classify}}' creatTime='{{filter.dateFormatStyle(item.creatDate)}}' workAddress='{{item.address}}' workTimeBegin='{{filter.dateFormatLength(item.workHoursBegin)}}' workTimeEnd='{{filter.dateFormatLength(item.workHoursEnd)}}'  bindtap="transmit" data-value="{{item}}"></PartTime>
+            </view>
+            
+            <!-- 明天完成此处的前端 -->
+
+            <!-- <view class="partTime" >
+                <PartTime></PartTime>
+                <PartTime></PartTime>
+                <PartTime></PartTime>
+            </view> -->
+
+        </view>
+    </view>
+</view>

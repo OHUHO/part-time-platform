@@ -1,0 +1,5 @@
+<!--pages/category/category.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view style='margin-top: {{height*2+20}}rpx'>
+   
+</view>

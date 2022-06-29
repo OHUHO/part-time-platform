@@ -1,0 +1,84 @@
+<!--pages/authentication/authentication.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view style='margin-top: {{height*2+20}}rpx'>
+  <form catchsubmit="container">
+    <view class="form">
+      <view class="title">姓名:</view>
+      <view class="reminder">
+        <input maxlength="15" placeholder="请输入姓名" value="{{name}}" data-name="name" bindblur="setInput"></input>
+      </view>
+    </view>
+
+    <view class="form">
+      <view class="title">性别:</view>
+      <picker class="reminder" bindchange="bindPickerChange1" value="{{index}}" range="{{array1}}">
+        <view class="picker">{{array1[gender]}}</view>
+      </picker>
+    </view>
+
+    <view class="form">
+      <view class="title">手机号:</view>
+      <view class="reminder">
+        <input maxlength="15" placeholder="请输入手机号" value="{{phone}}" data-name="phone" bindblur="setInput"></input>
+      </view>
+    </view>
+    
+    <view class="form">
+      <view class="title">状态:</view>
+      <picker class="reminder" bindchange="bindPickerChange2" value="{{index}}" range="{{array2}}">
+        <view class="picker">{{array2[state]}}</view>
+      </picker>
+    </view>
+
+    <view class="form">
+      <view class="title">学校:</view>
+      <view class="reminder">
+        <input maxlength="15" placeholder="请输入学校名称" value="{{school}}" data-name="school" bindblur="setInput"></input>
+      </view>
+    </view>
+
+    <view class="form">
+      <view class="title">证件类型:</view>
+      <picker class="reminder" bindchange="bindPickerChange3" value="{{index}}" range="{{array3}}">
+        <view class="picker">{{array3[papers_type]}}</view>
+      </picker>
+    </view>
+
+    <view class="form">
+      <view class="title">证件号码：</view>
+      <view class="reminder">
+        <input maxlength="15" placeholder="请输入证件号码" value="{{papers_id}}" data-name="papers_id" bindblur="setInput"></input>
+      </view>
+    </view>
+    <view class="form">
+      <view class="title">请上传证件图片</view>
+    </view>
+
+  <!--上传证件图片-->
+    <view class="image-list">
+      <block wx:for="{{imageList}}" wx:key="*this">
+        <view class="q-image-wrap">
+          <!-- 图片缩略图  -->
+          <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+          <!-- 移除图片的按钮  -->
+          <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">
+            <icon class='iconfont icon-chacha'></icon>
+          </view>
+        </view>
+      </block>
+      <view class='uploadImgBtn' bindtap="uploadImage" wx:if="{{imageList.length < 1}}">
+        <icon class='iconfont icon-tianjia-'></icon>
+      </view>
+    </view>
+
+    <view class="form">
+      <text class="title">{{Tips}}</text>
+    </view>
+    
+    <view class="radio">
+      <radio bindtap='radioClick' checked="{{radioCheck}}"/>{{instructionBook}}
+    </view>
+
+    <button class='btn' bindtap="submitBtn">确定</button>
+  </form>
+</view>

@@ -1,0 +1,117 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<view style='margin-top: {{height*2+20}}rpx'>
+  <view class="container">
+    <form catchsubmit="container">
+      <view class="bigTitle">
+        <text>完善基本信息</text>
+      </view>
+      <view class="form">
+        <view class="title">兼职名称:</view>
+        <view class="reminder">
+          <input maxlength="20" placeholder="请输入兼职的名称，3~20个字。" value="{{name}}" data-name="name" bindblur="setInput"></input>
+        </view>
+      </view>
+      <view class="form">
+        <view class="title">兼职内容:</view>
+        <view class="">
+          <textarea maxlength="300" placeholder="请输入兼职的内容，10~300字。" value="{{content}}" data-name="content" bindblur="setInput"></textarea>
+        </view>
+      </view>
+
+      <view class="bigTitle">
+        <text>薪资报酬</text>
+      </view>
+      <view class="form">
+        <view class="title">薪资:</view>
+        <view class="reminder">
+          <input maxlength="10" type="number" placeholder="请输入薪资(不能包含小数)" value="{{salary}}" data-name="salary" bindblur="setInput"></input>
+        </view>
+        <scroll-view scroll-x="true">
+          <view class="scroll-x">元/
+            <view wx:for="{{scrolls0}}" wx:key="name">
+              <view class="view {{index==idx0?'_left':'left'}}" data-index="{{index}}" bindtap="goIndex0">{{item}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      
+      <view class="form">
+        <view class="title">结算</view>
+        <scroll-view scroll-x="true">
+          <view class="scroll-x">
+            <view wx:for="{{scrolls1}}" wx:key="name">
+              <view class="view {{index==idx1?'_left':'left'}}" data-index="{{index}}" bindtap="goIndex1">{{item}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      
+
+      <view class="bigTitle">
+        <text>职位要求</text>
+      </view>
+      <view class="form1">
+        <view class="title1">兼职分类:</view>
+        <picker class="reminder1" bindchange="bindPickerChange1" value="{{index}}" range="{{array1}}">
+          <view class="picker">{{array1[classify]}}</view>
+        </picker>
+      </view>
+      <view class="form1">
+        <view class="title1">工作时间</view>
+        <view class="reminder1">  
+          <!-- 时间段 -->  
+          <view class="picker_group">  
+            <picker mode="date" start="{{date}}" value="{{date}}"  end="{{date2}}" bindchange="bindDateChange">  
+              <view class="picker">  
+                {{date}}  
+              </view>  
+            </picker>  
+            至  
+            <picker mode="date" start="{{date}}" value="{{date2}}" end="2050-1-1" bindchange="bindDateChange2">  
+              <view class="picker">  
+                {{date2}}  
+              </view>  
+            </picker>        
+          </view>  
+        </view>  
+      </view>
+      <view class="form1">
+        <view class="title1">招聘人数</view>
+        <view class="reminder1">
+          <input maxlength="4" type="number" placeholder="请输入招聘的人数" value="{{number}}" data-name="number" bindblur="setInput"></input>
+        </view>
+      </view>
+
+      <view class="form1">
+        <view class="title1">性别要求</view>
+        <picker class="reminder1" bindchange="bindPickerChange2" value="{{index}}" range="{{array2}}">
+          <view class="picker">{{array2[sex]}}</view>
+        </picker>
+      </view>
+
+      <view class="bigTitle">
+        <text>工作地点</text>
+      </view>
+      <view class="form1">
+        <view class="title1">工作地点</view>
+        <view class="reminder1">
+          <picker bindchange="changeRegion" mode = "region" value="{{regionA}}">
+            <view class="detail1">{{regionA[0]}} - {{regionA[1]}} - {{regionA[2]}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="form1">
+        <view class="title1">详细地址</view>
+        <view class="reminder1">
+          <input maxlength="40" placeholder="请填写工作的详细地址" value="{{regionB}}" data-name="regionB" bindblur="setInput"></input>
+        </view>
+      </view>
+    </form>
+    <view class="btn">
+      <view bindtap="submitBtn" class="main">
+        <text>确定发布</text>
+      </view>
+    </view>
+  </view>
+</view>
